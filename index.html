@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHU GSB 60th | Project Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Pretendard', sans-serif; background-color: #0a0a0a; color: #fff; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(138, 21, 56, 0.1); /* 경희대 딥레드 살짝 섞음 */
+            border: 1px solid #C5A059; /* 골드 테두리 */
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-6">
+
+    <header class="text-center mb-16">
+        <div class="w-16 h-16 border-2 border-[#C5A059] rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-[#C5A059] font-bold text-xl">60</span>
+        </div>
+        <h1 class="text-4xl font-bold tracking-tight mb-2">KHU GSB Project Board</h1>
+        <p class="text-gray-500 tracking-widest uppercase text-sm">경희대학교 경영대학원 60주년 웹 구축 작업실</p>
+    </header>
+
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl w-full">
+        
+        <a href="test01_260409.223607.html" class="glass-card p-8 rounded-2xl group">
+            <span class="text-blue-400 text-xs font-bold tracking-tighter uppercase">Test 001</span>
+            <h2 class="text-xl font-semibold mt-2 mb-4 group-hover:text-[#C5A059]">Final Main Page</h2>
+            <p class="text-gray-400 text-sm leading-relaxed">001 코딩 테스트</p>
+        </a>
+
+        <a href="test02_260409.223757.html" class="glass-card p-8 rounded-2xl group">
+            <span class="text-blue-400 text-xs font-bold tracking-tighter uppercase">Test 002</span>
+            <h2 class="text-xl font-semibold mt-2 mb-4 group-hover:text-blue-400">Spline Interaction</h2>
+            <p class="text-gray-400 text-sm leading-relaxed">002 코딩 테스트 : 60인 작은 사이즈로 한번에 볼 수 있도록 변경</p>
+        </a>
+
+        <a href="test03_260409.223941.html" class="glass-card p-8 rounded-2xl group">
+            <span class="text-blue-400 text-xs font-bold tracking-tighter uppercase">Test 003</span>
+            <h2 class="text-xl font-semibold mt-2 mb-4 group-hover:text-blue-400">Alumni Grid & Video</h2>
+            <p class="text-gray-400 text-sm leading-relaxed">003 지멋대로 연혁 잘라서 다시 테스트</p>
+        </a>
+
+        <a href="test04_225746.html" class="glass-card p-8 rounded-2xl group">
+            <span class="text-blue-400 text-xs font-bold tracking-tighter uppercase">Test Lab</span>
+            <h2 class="text-xl font-semibold mt-2 mb-4 group-hover:text-blue-400">Advanced Timeline</h2>
+            <p class="text-gray-400 text-sm leading-relaxed">004 spline 활용, 마우스 안 따라다님</p>
+        </a>
+
+            <a href="test05_260409.230012.html" class="glass-card p-8 rounded-2xl group">
+            <span class="text-blue-400 text-xs font-bold tracking-tighter uppercase">Test Lab</span>
+            <h2 class="text-xl font-semibold mt-2 mb-4 group-hover:text-blue-400">Advanced Timeline</h2>
+            <p class="text-gray-400 text-sm leading-relaxed">005 spline 불러오는 시간 길어서 로딩 넣었는데 로딩 너무 길고 연혁이 마음에 안듦</p>
+        </a>
+    
+            <a href="test06_260409.230234.html" class="glass-card p-8 rounded-2xl group">
+            <span class="text-blue-400 text-xs font-bold tracking-tighter uppercase">Test Lab</span>
+            <h2 class="text-xl font-semibold mt-2 mb-4 group-hover:text-blue-400">Advanced Timeline</h2>
+            <p class="text-gray-400 text-sm leading-relaxed">006 로딩화면 3초 강제종료, 연혁 지그재그, 60인 전체노출</p>
+        </a>
+
+    </main>
+
+    <footer class="mt-20 text-gray-600 text-xs tracking-widest">
+        © 2026 KHU GSB DIGITAL ARCHIVE.
+    </footer>
+
+</body>
+</html>

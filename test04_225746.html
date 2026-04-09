@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경희대학교 경영대학원 60주년 | 60 Years of Legacy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Pretendard', sans-serif; background-color: #0a0a0a; color: #fff; overflow-x: hidden; }
+        .serif { font-family: 'Noto Serif KR', serif; }
+        .text-deep-red { color: #8A1538; }
+        .bg-deep-red { background-color: #8A1538; }
+        .text-gold { color: #C5A059; }
+        .bg-gold { background-color: #C5A059; }
+        
+        /* Hero Text 입체감 (Shadow) */
+        .hero-title {
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(138, 21, 56, 0.4);
+        }
+
+        /* Spline iframe 반응형 최적화 */
+        .spline-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        @media (max-width: 768px) {
+            .spline-container iframe {
+                transform: scale(1.5); /* 모바일에서 3D 요소가 더 크게 보이도록 조정 */
+            }
+        }
+
+        /* 타임라인 스타일 */
+        .timeline-line::before {
+            content: ''; position: absolute; left: 50%; transform: translateX(-50%);
+            width: 1px; height: 100%; background: linear-gradient(to bottom, #C5A059, transparent);
+            opacity: 0.5;
+        }
+
+        /* 영상 모달 */
+        #videoModal { transition: opacity 0.3s ease-in-out; }
+        #videoModal.hidden { opacity: 0; pointer-events: none; }
+    </style>
+</head>
+<body class="bg-[#F9F7F2]"> <!-- 기본 배경은 다시 Off-White로 설정 (Hero만 어둡게) -->
+
+    <!-- [1] Navigation -->
+    <nav class="fixed w-full z-50 bg-black/20 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="relative w-12 h-12 flex items-center justify-center border-2 border-gold rounded-full">
+                    <span class="text-white font-bold text-xl">60</span>
+                    <div class="absolute -top-1 -right-1 bg-gold text-black text-[8px] px-1 rounded-full font-bold">TH</div>
+                </div>
+                <div>
+                    <h1 class="text-white font-bold leading-none text-lg tracking-tighter">KHU GSB</h1>
+                    <p class="text-[10px] tracking-[0.2em] text-gold font-semibold uppercase">Anniversary</p>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-white/80">
+                <a href="#hero" class="hover:text-gold transition">Home</a>
+                <a href="#timeline" class="hover:text-gold transition">History</a>
+                <a href="#message" class="hover:text-gold transition">Message</a>
+                <a href="#alumni" class="hover:text-gold transition font-bold">60 Alumni</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- [2] Hero Section (Spline 3D) -->
+    <section id="hero" class="relative h-screen w-full overflow-hidden bg-[#0a0a0a]">
+        <!-- Spline 3D Background -->
+        <div class="spline-container">
+            <iframe src="https://my.spline.design/distortingtypography-XrNIVWY2l0t0sYODZqB0BvBD/" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+
+        <!-- 그라데이션 오버레이 (Spline과 텍스트 조화) -->
+        <div class="absolute inset-0 z-[2] bg-gradient-to-b from-[#8A1538]/30 via-transparent to-[#0a0a0a]"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-[10] h-full flex flex-col items-center justify-center text-center px-6">
+            <div data-aos="fade-up" data-aos-duration="1500">
+                <h2 class="serif hero-title text-4xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+                    60 Years of Legacy:<br>
+                    <span class="text-gold">Reflecting the Future</span>
+                </h2>
+                <div class="w-24 h-px bg-gold mx-auto mb-8"></div>
+                <p class="text-lg md:text-2xl font-light text-white/90 tracking-widest leading-relaxed">
+                    경희대학교 경영대학원 60주년,<br class="md:hidden"> 지혜를 미래로 투영하다
+                </p>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+                <div class="w-[1px] h-16 bg-gradient-to-b from-gold to-transparent mx-auto"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [3] Timeline Section -->
+    <section id="timeline" class="py-32 bg-[#F9F7F2] text-gray-900">
+        <div class="max-w-5xl mx-auto px-6 text-center" data-aos="fade-up">
+            <h3 class="serif text-3xl font-bold text-deep-red mb-20 tracking-widest uppercase">GSB Chronology</h3>
+            <div class="relative timeline-line pb-12">
+                <div class="flex flex-col md:flex-row items-center mb-32" data-aos="fade-right">
+                    <div class="md:w-1/2 text-right pr-12 hidden md:block">
+                        <h4 class="text-4xl font-bold text-gold">1966</h4>
+                        <p class="text-gray-800 font-semibold mt-1">경희대학교 경영대학원 설립</p>
+                    </div>
+                    <div class="z-10 w-3 h-3 bg-deep-red rounded-full ring-4 ring-gold/30"></div>
+                    <div class="md:w-1/2 pl-12 text-left">
+                        <p class="md:hidden text-gold font-bold text-2xl">1966</p>
+                        <p class="text-gray-500">대한민국 비즈니스 교육의 새로운 역사가 시작되었습니다.</p>
+                    </div>
+                </div>
+                <!-- 추가 타임라인 데이터는 필요시 위 구조를 복사하여 사용 -->
+                <div class="flex flex-col md:flex-row items-center mb-32" data-aos="fade-left">
+                    <div class="md:w-1/2 text-right pr-12"></div>
+                    <div class="z-10 w-3 h-3 bg-deep-red rounded-full ring-4 ring-gold/30"></div>
+                    <div class="md:w-1/2 pl-12 text-left">
+                        <h4 class="text-4xl font-bold text-gold">2026</h4>
+                        <p class="text-gray-800 font-semibold mt-1">개원 60주년, 미래를 향한 재도약</p>
+                        <p class="text-gray-500 mt-1">지능형 경영 교육과 글로벌 네트워크의 완성</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [4] Message Section -->
+    <section id="message" class="py-32 bg-white text-gray-900">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
+            <div class="lg:w-1/2" data-aos="fade-up">
+                <span class="text-gold font-bold tracking-widest text-sm mb-4 block uppercase">Dean's Message</span>
+                <h3 class="serif text-4xl font-bold text-deep-red mb-8 leading-tight">60년의 자부심으로<br>새로운 시대를 엽니다</h3>
+                <p class="text-xl leading-relaxed text-gray-700 mb-8 italic">
+                    "경희 경영 60년은 변화에 대한 도전이었으며,<br>사람을 향한 따뜻한 지성의 기록이었습니다."
+                </p>
+                <p class="text-gray-600 leading-loose mb-10">
+                    이제 우리는 인공지능과 데이터가 지배하는 새로운 시대를 마주하고 있습니다. 경희대학교 경영대학원은 60년의 축적된 지혜를 바탕으로 기술과 인간이 조화를 이루는 미래 경영의 해답을 제시할 것입니다.
+                </p>
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-px bg-gold"></div>
+                    <span class="font-bold text-lg">경희대학교 경영대학원장 <span class="text-deep-red ml-2">홍 길 동</span></span>
+                </div>
+            </div>
+            <div class="lg:w-1/2 w-full aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl relative group" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80" class="w-full h-full object-cover opacity-70">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-20 h-20 bg-gold/90 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-black fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [5] Alumni 60 Grid Section (10-Column Compact) -->
+    <section id="alumni" class="py-32 bg-[#111] text-white">
+        <div class="max-w-[1500px] mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6" data-aos="fade-up">
+                <div>
+                    <h3 class="serif text-4xl font-bold text-gold mb-4">60 Leaders of KHU GSB</h3>
+                    <p class="text-gray-400 max-w-xl">경희의 이름으로 세상을 밝히는 60인의 동문들입니다. 사진을 클릭하여 그들의 인사이트가 담긴 인터뷰 영상을 확인해보세요.</p>
+                </div>
+                <div class="text-gold font-light tracking-[0.2em] text-sm border-b border-gold pb-2 uppercase">Celebrating Excellence</div>
+            </div>
+
+            <!-- Alumni Grid (PC: 10, Tablet: 6, Mobile: 4) -->
+            <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-1.5" data-aos="fade-up">
+                <!-- Sample Items (Total 10 represented, you can duplicate up to 60) -->
+                <script>
+                    const youtubeIDs = ['dQw4w9WgXcQ', '_OBlgSz8sSM', '761ae_KDg_Q', 'L_jWHffIx5E'];
+                    for(let i=1; i<=60; i++) {
+                        const randomVid = youtubeIDs[i % youtubeIDs.length];
+                        document.write(`
+                        <div class="relative aspect-square overflow-hidden group cursor-pointer bg-neutral-800" onclick="openVideo('${randomVid}')">
+                            <img src="https://i.pravatar.cc/300?u=khu${i}" alt="Alumni ${i}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#8A1538] via-[#8A1538]/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-3">
+                                <p class="font-bold text-xs sm:text-sm text-white">동문 성함 ${i}</p>
+                                <p class="text-[9px] text-gold font-medium uppercase mt-0.5 tracking-tighter">${(i+80)}학번</p>
+                            </div>
+                        </div>
+                        `);
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- [6] Video Modal Window -->
+    <div id="videoModal" class="fixed inset-0 bg-black/98 z-[100] hidden flex items-center justify-center p-4">
+        <button onclick="closeVideo()" class="absolute top-8 right-8 text-white hover:text-gold transition text-5xl font-light">&times;</button>
+        <div class="w-full max-w-5xl aspect-video shadow-2xl border border-white/10 rounded-lg overflow-hidden">
+            <iframe id="videoPlayer" class="w-full h-full" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- [7] Footer -->
+    <footer class="bg-black text-white py-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="col-span-1">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 border border-gold flex items-center justify-center font-bold text-gold">60</div>
+                    <span class="text-xl font-bold tracking-tighter">KHU GSB</span>
+                </div>
+                <p class="text-sm text-gray-500 leading-relaxed">
+                    경희대학교 경영대학원은 지난 60년의 성취를 디딤돌 삼아, 다가올 100년의 미래 경영 가치를 창출하겠습니다.
+                </p>
+            </div>
+            <div class="md:text-right col-span-2 flex flex-col justify-end">
+                <p class="text-sm text-gray-400 mb-2">서울특별시 동대문구 경희대로 26 경희대학교 경영대학원</p>
+                <p class="text-xs text-gray-600 uppercase tracking-widest">© 2026 Kyung Hee University GSB. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+
+        // Video Modal Functionality
+        const modal = document.getElementById('videoModal');
+        const player = document.getElementById('videoPlayer');
+
+        function openVideo(videoId) {
+            player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideo() {
+            player.src = '';
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on ESC
+        window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideo(); });
+    </script>
+</body>
+</html>
